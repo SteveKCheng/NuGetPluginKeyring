@@ -1,0 +1,20 @@
+#!/bin/bash
+# Stand-in for kwallet-query. Logs its argv so tests can assert on it, then prints a
+# secret for known entries.
+echo "ARGV: $*" >> "${FAKE_KWALLET_LOG:-/dev/null}"
+
+entry=""
+prev=""
+for a in "$@"; do
+  if [ "$prev" = "--read-password" ]; then entry="$a"; fi
+  prev="$a"
+done
+
+case "$entry" in
+  nuget-example-internal) echo "s3cr3t-pat-value" ;;
+  nuget-slow)             sleep 30; echo "too-late" ;;
+  nuget-empty)            : ;;                      # exit 0, no output
+  nuget-broken)           echo "kwallet-query: no such entry" >&2; exit 1 ;;
+  nuget-chatty)           printf '\n\nreal-secret\ntrailing noise\n' ;;
+  *)                      echo "kwallet-query: unknown entry '$entry'" >&2; exit 1 ;;
+esac

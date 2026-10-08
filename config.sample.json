@@ -1,0 +1,68 @@
+{
+  // Sample configuration for nuget-plugin-keyring.
+  // Copy to ~/.config/KeyringNuGetCredProvider/config.json and edit.
+  // JSON comments and trailing commas are accepted.
+
+  "keyring": {
+    // Executable used to read a secret. Must print the secret on stdout and exit 0.
+    "executable": "kwallet-query",
+
+    // Argument templates, in order. Placeholders:
+    //   {entry}     the keyring entry name for the matched source
+    //   {username}  the username for the matched source
+    //   {folder}    source "folder", else keyring "folder"
+    //   {wallet}    source "wallet",  else keyring "wallet"
+    //   {uri}       the full URI NuGet asked about
+    //   {host}      the host of that URI
+    // A nested array is an all-or-nothing group: it is dropped entirely when one of its
+    // placeholders is unset, so an optional "--folder" never appears without its value.
+    //
+    // >>> VERIFY THESE AGAINST YOUR kwallet-query BEFORE RELYING ON THEM. <<<
+    //     Check with:  nuget-plugin-keyring --uri <your source> --dry-run
+    "arguments": [
+      ["--read-password", "{entry}"],
+      ["--folder", "{folder}"],
+      ["{wallet}"]
+    ],
+
+    // Defaults for every source; a source may override either.
+    "folder": "Passwords",
+    "wallet": "kdewallet",
+
+    // The query process is killed after this long. Keeps a wallet-unlock prompt from
+    // stalling a restore indefinitely.
+    "timeoutSeconds": 10,
+
+    // Extra environment for the query process. Useful when restoring from a context that
+    // does not inherit the session bus.
+    "environment": {
+      // "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus"
+    }
+  },
+
+  // Used by sources that do not set "username". Many feeds accept any username alongside
+  // a PAT; Azure DevOps conventionally uses the literal below.
+  "defaultUsername": "VssSessionToken",
+
+  "sources": [
+    {
+      // Optional label, only used in log messages.
+      "name": "example-internal",
+
+      // Case-insensitive prefix of the URI NuGet asks about. Use a host-level prefix so
+      // that package download URIs match too, not just index.json. Longest match wins.
+      "uriPrefix": "https://nuget.example.com/",
+
+      // Name of the keyring entry holding the password or PAT.
+      "entry": "nuget-example-internal",
+
+      // Not a secret, so it lives here rather than in the keyring.
+      "username": "steve",
+
+      // Optional per-source overrides.
+      // "folder": "Passwords",
+      // "wallet": "kdewallet",
+      // "authenticationTypes": ["basic"]
+    }
+  ]
+}
