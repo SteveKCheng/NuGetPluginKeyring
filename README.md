@@ -190,3 +190,12 @@ can otherwise mask changes while experimenting (`dotnet nuget locals plugins-cac
 
 Nothing here is cached by the plugin. NuGet caches the credential for the duration of a
 restore, so one restore performs one keyring lookup per source.
+
+## Author's note
+
+All of the above was written by Claude.  You can say this project is over-engineered, and perhaps 
+so is this whole plug-in mechanism from NuGet.  I had thought the project would just be one C# 
+script, but apparently it needs all sorts of internal classes.
+
+I am putting it up anyway in case anyone finds it useful.
+
