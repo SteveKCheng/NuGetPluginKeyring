@@ -1,6 +1,6 @@
 {
   // Sample configuration for nuget-plugin-keyring.
-  // Copy to ~/.config/KeyringNuGetCredProvider/config.json and edit.
+  // Copy to ~/.config/NuGetPluginKeyring/config.json and edit.
   // JSON comments and trailing commas are accepted.
 
   "keyring": {

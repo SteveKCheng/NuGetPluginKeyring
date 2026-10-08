@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Logging;
+using NuGetPluginKeyring.Logging;
 using NuGet.Protocol.Plugins;
 
-namespace KeyringNuGetCredProvider.Plugin
+namespace NuGetPluginKeyring.Plugin
 {
     /// <summary>
     /// Accepts NuGet's <c>Initialize</c> message and adopts the client's request timeout.

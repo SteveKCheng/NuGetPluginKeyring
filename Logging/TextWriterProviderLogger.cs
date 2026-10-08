@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using NuGet.Common;
 
-namespace KeyringNuGetCredProvider.Logging
+namespace NuGetPluginKeyring.Logging
 {
     /// <summary>
     /// Writes to a <see cref="TextWriter"/> — stderr, or a log file.

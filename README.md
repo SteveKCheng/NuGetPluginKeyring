@@ -69,7 +69,7 @@ work with this plugin):
 
 ## Configuration
 
-Copy `config.sample.json` to `~/.config/KeyringNuGetCredProvider/config.json`
+Copy `config.sample.json` to `~/.config/NuGetPluginKeyring/config.json`
 (`$XDG_CONFIG_HOME` is honoured) and edit it. `KEYRING_NUGET_CREDPROVIDER_CONFIG` overrides
 the location. JSON comments and trailing commas are accepted.
 

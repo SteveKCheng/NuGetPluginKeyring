@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace KeyringNuGetCredProvider.Configuration
+namespace NuGetPluginKeyring.Configuration
 {
     /// <summary>
     /// One entry of the <c>arguments</c> array in the configuration file.

@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Logging;
+using NuGetPluginKeyring.Logging;
 using NuGet.Protocol.Plugins;
 
-namespace KeyringNuGetCredProvider.Plugin
+namespace NuGetPluginKeyring.Plugin
 {
     /// <summary>
     /// Deserializes the request payload, runs the handler, and sends the response.

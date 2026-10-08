@@ -1,6 +1,6 @@
 using NuGet.Common;
 
-namespace KeyringNuGetCredProvider.Logging
+namespace NuGetPluginKeyring.Logging
 {
     /// <summary>
     /// Minimal logging abstraction. Deliberately not <c>NuGet.Common.ILogger</c>: in plugin mode

@@ -15,7 +15,7 @@
       The convention-based location requires the folder name to match the assembly name.
     -->
     <AssemblyName>nuget-plugin-keyring</AssemblyName>
-    <RootNamespace>KeyringNuGetCredProvider</RootNamespace>
+    <RootNamespace>NuGetPluginKeyring</RootNamespace>
 
     <!-- Never let anything but the plugin protocol reach stdout. -->
     <InvariantGlobalization>true</InvariantGlobalization>

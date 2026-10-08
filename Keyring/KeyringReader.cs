@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Configuration;
-using KeyringNuGetCredProvider.Logging;
+using NuGetPluginKeyring.Configuration;
+using NuGetPluginKeyring.Logging;
 
-namespace KeyringNuGetCredProvider.Keyring
+namespace NuGetPluginKeyring.Keyring
 {
     /// <summary>
     /// Reads secrets by launching an external query executable (by default

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using NuGet.Common;
 using NuGet.Protocol.Plugins;
 
-namespace KeyringNuGetCredProvider.Logging
+namespace NuGetPluginKeyring.Logging
 {
     /// <summary>
     /// Forwards messages to the NuGet client over the plugin connection, which is the only way

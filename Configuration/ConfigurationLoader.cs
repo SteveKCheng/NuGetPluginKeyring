@@ -2,14 +2,14 @@ using System;
 using System.IO;
 using System.Text.Json;
 
-namespace KeyringNuGetCredProvider.Configuration
+namespace NuGetPluginKeyring.Configuration
 {
     internal static class ConfigurationLoader
     {
         /// <summary>Points at an explicit configuration file, overriding the default locations.</summary>
         public const string ConfigPathVariable = "KEYRING_NUGET_CREDPROVIDER_CONFIG";
 
-        private const string DirectoryName = "KeyringNuGetCredProvider";
+        private const string DirectoryName = "NuGetPluginKeyring";
         private const string FileName = "config.json";
 
         public static JsonSerializerOptions SerializerOptions { get; } = CreateSerializerOptions();

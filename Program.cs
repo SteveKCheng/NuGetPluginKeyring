@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Configuration;
-using KeyringNuGetCredProvider.Keyring;
-using KeyringNuGetCredProvider.Logging;
-using KeyringNuGetCredProvider.Plugin;
+using NuGetPluginKeyring.Configuration;
+using NuGetPluginKeyring.Keyring;
+using NuGetPluginKeyring.Logging;
+using NuGetPluginKeyring.Plugin;
 using NuGet.Common;
 
-namespace KeyringNuGetCredProvider
+namespace NuGetPluginKeyring
 {
     internal static class Program
     {

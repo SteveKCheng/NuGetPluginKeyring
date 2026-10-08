@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using NuGet.Common;
 
-namespace KeyringNuGetCredProvider.Logging
+namespace NuGetPluginKeyring.Logging
 {
     /// <summary>
     /// Fans messages out to several sinks. Sinks are added over the process lifetime: the

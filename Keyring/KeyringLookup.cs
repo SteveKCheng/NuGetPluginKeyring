@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace KeyringNuGetCredProvider.Keyring
+namespace NuGetPluginKeyring.Keyring
 {
     internal enum KeyringLookupStatus
     {

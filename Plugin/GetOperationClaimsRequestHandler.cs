@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Logging;
+using NuGetPluginKeyring.Logging;
 using NuGet.Protocol.Plugins;
 
-namespace KeyringNuGetCredProvider.Plugin
+namespace NuGetPluginKeyring.Plugin
 {
     /// <summary>
     /// Declares what this plugin can do.

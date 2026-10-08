@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Configuration;
-using KeyringNuGetCredProvider.Keyring;
-using KeyringNuGetCredProvider.Logging;
+using NuGetPluginKeyring.Configuration;
+using NuGetPluginKeyring.Keyring;
+using NuGetPluginKeyring.Logging;
 
-namespace KeyringNuGetCredProvider
+namespace NuGetPluginKeyring
 {
     internal enum CredentialOutcome
     {

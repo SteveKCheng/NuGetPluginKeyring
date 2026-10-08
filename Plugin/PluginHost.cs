@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using KeyringNuGetCredProvider.Logging;
+using NuGetPluginKeyring.Logging;
 using NuGet.Protocol.Plugins;
 
-namespace KeyringNuGetCredProvider.Plugin
+namespace NuGetPluginKeyring.Plugin
 {
     /// <summary>
     /// Runs the process as a NuGet plugin: performs the handshake over stdin/stdout, serves
